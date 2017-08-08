@@ -8,7 +8,7 @@
     IN EXCHANGE JUST GIVE US CREDITS AND TELL YOUR FRIENDS ABOUT US
 
     ========================================================  */
-(function ($) {
+(function() {
     "use strict";
     let mainApp = {
         scrollAnimation_fun: function () {
@@ -88,4 +88,4 @@
         mainApp.top_flex_slider_fun();
         mainApp.custom_fun();
     });
-}(jQuery));
+}());
