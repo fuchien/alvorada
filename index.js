@@ -5,11 +5,11 @@ const port = process.env.PORT || 4000
 
 const app = express()
 
-app.use(express.static(path.join(__dirname, 'dist')))
+app.use(express.static(path.join(__dirname, 'dist1')))
 
 console.log(__dirname)
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'dist/index.html'))
+    res.sendFile(path.join(__dirname, 'dist1/index.html'))
 })
 
 app.listen(port, () => {
