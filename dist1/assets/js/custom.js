@@ -11,6 +11,28 @@
 (function() {
     "use strict";
     let mainApp = {
+        bkg_img_slider: function() {
+
+            let images = [
+                'Assets/img/patio_verde.JPG',
+                'Assets/img/placas.JPG',
+                'Assets/img/jardim.JPG',
+                'Assets/img/informatica.jpg',
+                'Assets/img/vivencia.JPG',
+            ]
+            let nextimage = 0;
+            doSlideshow();
+
+            function doSlideshow() {
+                if (nextimage >= images.length) {
+                    nextimage = 0;
+                }
+                $('.home-sec').css('background-image', 'url("' + images[nextimage++] + '")')
+                    .fadeIn(1000, function () {
+                        setTimeout(doSlideshow, 5000);
+                    });
+            }
+        },
         scrollAnimation_fun: function () {
 
             /*====================================
@@ -64,25 +86,7 @@
     }
 
     $(document).ready(function () {
-        let images = [
-            'Assets/img/patio_verde.JPG',
-            'Assets/img/placas.JPG',
-            'Assets/img/jardim.JPG',
-            'Assets/img/informatica.jpg',
-            'Assets/img/vivencia.JPG',
-        ]
-        let nextimage = 0;
-        doSlideshow();
-
-        function doSlideshow() {
-            if (nextimage >= images.length) {
-                nextimage = 0;
-            }
-            $('.home-sec').css('background-image', 'url("' + images[nextimage++] + '")')
-                .fadeIn(1000, function () {
-                    setTimeout(doSlideshow, 5000);
-                });
-        }
+        mainApp.bkg_img_slider();
         mainApp.scrollAnimation_fun();
         mainApp.scroll_fun();
         mainApp.top_flex_slider_fun();
