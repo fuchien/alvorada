@@ -14,11 +14,11 @@
         bkg_img_slider: function() {
 
             let images = [
-                'Assets/img/patio_verde.JPG',
-                'Assets/img/placas.JPG',
-                'Assets/img/jardim.JPG',
-                'Assets/img/informatica.jpg',
-                'Assets/img/vivencia.JPG',
+                'assets/img/patio_verde.JPG',
+                'assets/img/placas.JPG',
+                'assets/img/jardim.JPG',
+                'assets/img/informatica.jpg',
+                'assets/img/vivencia.JPG',
             ]
             let nextimage = 0;
             doSlideshow();
