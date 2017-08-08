@@ -228,6 +228,7 @@ h1::after {
 
 #faculty-sec {
     background-image: url('../img/portaria2.jpg');
+    background-attachment: fixed;
     background-position: center;
     background-size: cover;
     color: #fff;
