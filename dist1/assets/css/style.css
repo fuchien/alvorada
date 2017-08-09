@@ -59,7 +59,15 @@ body {
     color: rgba(11, 237, 114, .8);
 }
 
-.navbar-inverse {
+#menu .menu .btnMenu {
+    /*background-image: url('../img/down.png');
+    background-size: cover;
+    background-position: center;*/
+    min-height: 4vh;
+    min-width: 7vw;
+}
+
+.navbar {
     border-color: transparent;
 }
 

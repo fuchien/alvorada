@@ -11,6 +11,36 @@
 (function() {
     "use strict";
     let mainApp = {
+
+        menuToggle: function() {
+
+            let down = false;
+            $('.btnMenu').css({
+                'background-image': 'url("assets/img/down.png")',
+                'background-size': 'cover',
+                'background-position': 'center'
+            });
+            $('.btnMenu').click(() => {
+
+                if (down) {
+
+                    down = false;
+                    $('.btnMenu').css({
+                        'background-image': 'url("assets/img/down.png")',
+                        'background-size': 'cover',
+                        'background-position': 'center'
+                    });
+                } else {
+
+                    down = true;
+                    $('.btnMenu').css({
+                        'background-image': 'url("assets/img/up.png")',
+                        'background-size': 'cover',
+                        'background-position': 'center'
+                    });
+                }
+            })
+        },
         bkg_img_slider: function() {
 
             let images = [
@@ -86,6 +116,7 @@
     }
 
     $(document).ready(function () {
+        mainApp.menuToggle();
         mainApp.bkg_img_slider();
         mainApp.scrollAnimation_fun();
         mainApp.scroll_fun();
