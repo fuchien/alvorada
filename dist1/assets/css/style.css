@@ -55,8 +55,18 @@ body {
     box-shadow: 4px 4px 5px #888888;
 }
 
+.ativo>li>a:hover, .ativo>li>a:focus {
+    border-color: transparent !important;
+    background-color: transparent;
+    cursor: pointer;
+}
+
 #menu li a {
     color: rgba(11, 237, 114, .8);
+}
+
+#menu .ativo {
+    margin-top: 1vh;
 }
 
 #menu .menu .btnMenu {
