@@ -533,6 +533,61 @@ h1::after {
 }
 
 
+/*CICLOS*/
+
+.ciclos {
+    padding: 0;
+    width: 100%;
+    min-height: 85vh;
+}
+
+.ciclos h2 {
+    text-align: center;
+}
+
+.ciclos .pedagogica {
+    height: 50vh;
+    overflow-y: auto;
+}
+.ciclos .ped1 {
+    padding-left: 1.5vw;
+    color: #1A94C4;
+    height: 38vh;
+}
+
+@media (max-width: 768px) {
+    .ciclos .ped1 {
+        padding-left: 4vw;
+    }
+}
+.ciclos .ped1 span {
+    color: #000;
+}
+.ciclos .pedagogica::-webkit-scrollbar-track {
+    background-color: #1A94C4;
+}
+.ciclos .pedagogica::-webkit-scrollbar {
+    width: 6px;
+    background: #1A94C4;
+}
+.ciclos .pedagogica::-webkit-scrollbar-thumb {
+    background: rgba(11, 237, 114, .8);
+}
+
+.ciclos .panel {
+    width: 100%;
+}
+
+.ciclos .panel:hover {
+    cursor: pointer;
+}
+
+.ciclos .accord {
+    display: flex;
+    justify-content: space-between;
+}
+
+
 /*=====================================
   CONTACT STYLES 
   ===================================*/
