@@ -28,7 +28,7 @@
                     nextimage = 0;
                 }
                 $('.home-sec').css('background-image', 'url("' + images[nextimage++] + '")')
-                    .fadeIn(1000, function () {
+                    .fadeIn(1, function () {
                         setTimeout(doSlideshow, 5000);
                     });
             }
