@@ -243,14 +243,14 @@ body {
     color: #000;
 }
 
-.tag-line h2 {
-    font-size: 20px;
+.tag-line h1 {
+    font-size: 1.5em;
     font-weight: 900;
     padding: 5px 10px 10px 5px;
     color: #005E5A;
 }
 
-.tag-line h2>i {
+.tag-line h1>i {
     margin-left: 8px;
     margin-right: 8px;
 }
@@ -299,6 +299,19 @@ h1::after {
 }
 
 
+/*PILARES*/
+.pilares h2 {
+    margin-top: 10vh;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.pilares hr {
+    border: 1px solid #1A94C4;
+    width: 70%;
+}
+
+
 /*=====================================
   ABOUT STYLES 
   ===================================*/
@@ -334,12 +347,56 @@ h1::after {
 
 .about-div hr {
     border: 1px solid #1A94C4;
+    width: 100%;
+}
+
+.pilares .pilaresdiv {
+    display: flex;
+    justify-content: center;
+}
+
+.pilares .pilar {
+    display: flex;
+    flex-flow: row wrap;
+    width: 40%;
+    justify-content: space-around;
+}
+
+.pilares .pilar li {
+    width: 35%;
+}
+
+.pilares ul {
+    color: #1A94C4;
+    margin-top: 0;
+}
+
+.pilares ul li strong {
+    color: #000;
+}
+
+.pilares .essencia {
+    margin-top: 5vh;
+}
+
+@media (max-width: 768px) {
+    .pilares .pilar {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .pilares .pilar li {
+        width: 50%;
+    }
 }
 
 .about-div h3 {
-    font-size: 25px;
+    font-size: 1.1em;
     font-weight: 700;
     text-transform: uppercase;
+    margin: 0;
 }
 
 .about-div p {
@@ -506,8 +563,9 @@ h1::after {
 
 #footer {
     padding: 5px 20px;
-    background-color: #2d3d5a;
+    /*background-color: #2d3d5a;*/
+    background-color: rgba(11, 200, 150, 1);
     text-align: center;
     color: #fff;
-    font-size: 15px;
+    font-size: 1.3em;
 }
