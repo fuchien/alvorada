@@ -88,6 +88,12 @@ body {
     background-attachment: fixed;
 }
 
+@media (max-width: 768px) {
+    .home-sec {
+        background-attachment: scroll;
+    }
+}
+
 .home-sec .overlay {
     background: rgba(38, 57, 88, 0.5);
     min-height: 100vh;
