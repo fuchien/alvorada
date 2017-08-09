@@ -88,7 +88,7 @@ body {
     background-attachment: fixed;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .home-sec {
         background-attachment: scroll;
     }
@@ -431,6 +431,12 @@ h1::after {
     z-index: 2;
 }
 
+@media (max-width: 1024px) {
+    #faculty-sec {
+        background-attachment: scroll;
+    }
+}
+
 #faculty-sec:before {
     position: absolute;
     top: 0;
@@ -522,6 +528,12 @@ h1::after {
     background-size: cover;
     color: #fff;
     background-attachment: fixed;
+}
+
+@media (max-width: 1024px) {
+    #contact-sec {
+        background-attachment: scroll;
+    }
 }
 
 #contact-sec .overlay {
