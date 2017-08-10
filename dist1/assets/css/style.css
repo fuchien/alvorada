@@ -1,20 +1,4 @@
-﻿/*=============================================================
-    Authour URI: www.binarytheme.com
-    License: Commons Attribution 3.0
-
-    http://creativecommons.org/licenses/by/3.0/
-
-    100% To use For Personal And Commercial Use.
-    IN EXCHANGE JUST GIVE US CREDITS AND TELL YOUR FRIENDS ABOUT US
-   
-    ========================================================  */
-
-
-/* =============================================================
-   GENERAL STYLES
- ============================================================ */
-
-body {
+﻿body {
     font-family: 'Open Sans', sans-serif;
     line-height: 30px;
     font-size: 14px;
@@ -650,7 +634,6 @@ h1::after {
     }
 }
 
-
 /*=====================================
   Footer STYLES 
   ===================================*/
@@ -663,3 +646,8 @@ h1::after {
     color: #fff;
     font-size: 1.3em;
 }
+
+/* parallax */
+.parallax {
+  background-position: 50% 0;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.7); }

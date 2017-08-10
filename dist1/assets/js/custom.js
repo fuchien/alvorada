@@ -1,14 +1,4 @@
-﻿/*=============================================================
-    Authour URI: www.binarytheme.com
-    License: Commons Attribution 3.0
-
-    http://creativecommons.org/licenses/by/3.0/
-
-    100% Free To use For Personal And Commercial Use.
-    IN EXCHANGE JUST GIVE US CREDITS AND TELL YOUR FRIENDS ABOUT US
-
-    ========================================================  */
-(function() {
+﻿(function() {
     "use strict";
     let mainApp = {
 
@@ -40,6 +30,18 @@
                     });
                 }
             })
+        },
+        parallax: function() {
+
+            $('.parallax').each(function() {
+            var $obj = $(this);
+            $(window).scroll(function() {
+                var offset = $obj.offset();
+                var yPos = -($(window).scrollTop() - offset.top) / $obj.data('speed');
+                var bgpos = '50% ' + yPos + 'px';
+                $obj.css('background-position', bgpos);
+            });
+        });
         },
         bkg_img_slider: function() {
 
@@ -117,6 +119,7 @@
 
     $(document).ready(function () {
         mainApp.bkg_img_slider();
+        mainApp.parallax();
         mainApp.menuToggle();
         mainApp.scrollAnimation_fun();
         mainApp.scroll_fun();
