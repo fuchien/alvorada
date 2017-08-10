@@ -103,6 +103,8 @@ body {
     -webkit-background-size: cover;
     background-size: cover;
     color: #fff;
+    position: relative;
+    z-index: 2;
     background-attachment: fixed;
 }
 
@@ -112,10 +114,10 @@ body {
     }
 }
 
-.home-sec .overlay {
+/*.home-sec .overlay {
     background: rgba(38, 57, 88, 0.5);
     min-height: 100vh;
-}
+}*/
 
 .home-sec h1 {
     color: #fff;
@@ -130,24 +132,25 @@ body {
 }
 
 .home-sec .slides {
-    /*background-color: rgba(0, 0, 0, .1);*/
-    width: 80vw;
+    background: rgba(38, 57, 88, 0.5);
     margin: 0 auto;
     position: relative;
     z-index: 10;
 }
 
 @media (min-width: 1024px) {
+    .home-sec .slides {
+        width: 70vw;
+    }
+
     .moon {
         z-index: 11;
         position: absolute;
         top: calc(50%);
         left: calc(50%);
         display: block;
-        width: 8vw;
+        width: 7vw;
         height: 7vw;
-        /*background: rgb(234, 242, 253);
-        border: .2vw solid rgb(22, 23, 67);*/
         border-radius: 100%;
         box-shadow: inset -1.5vw -1vw 0 rgba(72, 189, 255, .05), 0 0 2vw rgba(22, 23, 67, .5);
         will-change: transform;
@@ -267,14 +270,14 @@ body {
     color: #000;
 }
 
-.tag-line h1 {
-    font-size: 1.5em;
+.tag-line h2 {
+    font-size: 1.3em;
     font-weight: 900;
     padding: 5px 10px 10px 5px;
     color: #005E5A;
 }
 
-.tag-line h1>i {
+.tag-line h2>i {
     margin-left: 8px;
     margin-right: 8px;
 }
