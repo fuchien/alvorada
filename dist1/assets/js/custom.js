@@ -116,8 +116,8 @@
     }
 
     $(document).ready(function () {
-        mainApp.menuToggle();
         mainApp.bkg_img_slider();
+        mainApp.menuToggle();
         mainApp.scrollAnimation_fun();
         mainApp.scroll_fun();
         mainApp.top_flex_slider_fun();
