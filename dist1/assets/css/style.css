@@ -643,6 +643,7 @@ h1::after {
 
 .contato {
     padding: 2vh 0;
+    padding-bottom: 8vh;
     background-image: url("../img/contato-background.png");
     width: 98.5vw;
     max-width: 98.5vw;
