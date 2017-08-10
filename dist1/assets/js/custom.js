@@ -1,8 +1,8 @@
-﻿(function() {
+﻿(function () {
     "use strict";
     let mainApp = {
 
-        menuToggle: function() {
+        menuToggle: function () {
 
             let down = false;
             $('.btnMenu').css({
@@ -31,19 +31,19 @@
                 }
             })
         },
-        parallax: function() {
+        parallax: function () {
 
-            $('.parallax').each(function() {
-            var $obj = $(this);
-            $(window).scroll(function() {
-                var offset = $obj.offset();
-                var yPos = -($(window).scrollTop() - offset.top) / $obj.data('speed');
-                var bgpos = '50% ' + yPos + 'px';
-                $obj.css('background-position', bgpos);
+            $('.parallax').each(function () {
+                var $obj = $(this);
+                $(window).scroll(function () {
+                    var offset = $obj.offset();
+                    var yPos = -($(window).scrollTop() - offset.top) / $obj.data('speed');
+                    var bgpos = '50% ' + yPos + 'px';
+                    $obj.css('background-position', bgpos);
+                });
             });
-        });
         },
-        bkg_img_slider: function() {
+        bkg_img_slider: function () {
 
             let images = [
                 'assets/img/patio_verde.JPG',
@@ -105,7 +105,6 @@
                 slideshowSpeed: 3500, //Integer: Set the speed of the slideshow cycling, in milliseconds
                 animationSpeed: 1000, //Integer: Set the speed of animations, in milliseconds
                 startAt: 0, //Integer: The slide that the slider should start on. Array notation (0 = first slide)
-
             });
         },
 
@@ -113,6 +112,35 @@
             /*====================================
              WRITE YOUR   SCRIPTS  BELOW
             ======================================*/
+            let slideIndex = 1;
+            showDivs(slideIndex);
+
+            $('#left').click(() => {
+                plusDivs(-1)
+            })
+
+            $('#right').click(() => {
+                plusDivs(1)
+            })
+
+            function plusDivs(n) {
+                showDivs(slideIndex += n);
+            }
+
+            function showDivs(n) {
+                let i;
+                let x = document.getElementsByClassName("slide");
+                if (n > x.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = x.length
+                }
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                x[slideIndex - 1].style.display = "block";
+            }
 
         }
     }
