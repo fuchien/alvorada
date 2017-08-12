@@ -21,7 +21,7 @@ function sendPost(event) {
     };
 
     // usando nosso serviço
-    let url = 'http://localhost:3000/formulario'
+    let url = '/formulario'
     new HttpService()
         .post(url, body)
         .then((msg) => {
