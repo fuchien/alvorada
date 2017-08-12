@@ -5,53 +5,36 @@
         menuToggle: function () {
 
             let down = false;
-            $('.btnMenu').css({
-                'background-image': 'url("assets/img/down.png")',
-                'background-size': 'cover',
-                'background-position': 'center'
-            });
+            $('.btnMenu').css({'background-image': 'url("assets/img/down.png")', 'background-size': 'cover', 'background-position': 'center'});
             $('.btnMenu').click(() => {
 
                 if (down) {
 
                     down = false;
-                    $('.btnMenu').css({
-                        'background-image': 'url("assets/img/down.png")',
-                        'background-size': 'cover',
-                        'background-position': 'center'
-                    });
+                    $('.btnMenu').css({'background-image': 'url("assets/img/down.png")', 'background-size': 'cover', 'background-position': 'center'});
                 } else {
 
                     down = true;
-                    $('.btnMenu').css({
-                        'background-image': 'url("assets/img/up.png")',
-                        'background-size': 'cover',
-                        'background-position': 'center'
-                    });
+                    $('.btnMenu').css({'background-image': 'url("assets/img/up.png")', 'background-size': 'cover', 'background-position': 'center'});
                 }
             })
         },
         parallax: function () {
 
-            $('.parallax').each(function () {
-                var $obj = $(this);
-                $(window).scroll(function () {
-                    var offset = $obj.offset();
-                    var yPos = -($(window).scrollTop() - offset.top) / $obj.data('speed');
-                    var bgpos = '50% ' + yPos + 'px';
-                    $obj.css('background-position', bgpos);
+            $('.parallax')
+                .each(function () {
+                    var $obj = $(this);
+                    $(window).scroll(function () {
+                        var offset = $obj.offset();
+                        var yPos = -($(window).scrollTop() - offset.top) / $obj.data('speed');
+                        var bgpos = '50% ' + yPos + 'px';
+                        $obj.css('background-position', bgpos);
+                    });
                 });
-            });
         },
         bkg_img_slider: function () {
 
-            let images = [
-                'assets/img/patio_verde.JPG',
-                'assets/img/placas.JPG',
-                'assets/img/jardim.JPG',
-                'assets/img/informatica.jpg',
-                'assets/img/vivencia.JPG',
-            ]
+            let images = ['assets/img/patio_verde.JPG', 'assets/img/placas.JPG', 'assets/img/jardim.JPG', 'assets/img/informatica.jpg', 'assets/img/vivencia.JPG']
             let nextimage = 0;
             doSlideshow();
 
@@ -109,9 +92,7 @@
         },
 
         custom_fun: function () {
-            /*====================================
-             WRITE YOUR   SCRIPTS  BELOW
-            ======================================*/
+            // SLIDER
             let slideIndex = 1;
             showDivs(slideIndex);
 
@@ -141,7 +122,6 @@
                 }
                 x[slideIndex - 1].style.display = "block";
             }
-
         }
     }
 
