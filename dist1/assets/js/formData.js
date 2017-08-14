@@ -6,7 +6,8 @@ $(function () {
                 minlength: 3
             },
             email: {
-                required: true
+                required: true,
+                email: true
             },
             titulo: {
                 required: true
@@ -21,7 +22,8 @@ $(function () {
                 minlength: "O nome deve ter pelo menos 3 caracteres"
             },
             email: {
-                required: "É necessário informar um email"
+                required: "É necessário informar um email",
+                email: "Por favor, informe um e-mail válido"
             },
             titulo: {
                 required: "É necessário informar um título"
