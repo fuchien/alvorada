@@ -657,6 +657,12 @@ h1::after {
     animation: spin 2s infinite linear
 }
 
+.error {
+    color: #a94442;
+    border-color: #ebccd1;
+    padding: .1em 1em;
+}
+
 @keyframes spin {
     0% {
         transform: rotate(0deg)
