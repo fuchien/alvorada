@@ -20,8 +20,8 @@
             })
         },
         parallax: function () {
-
-            $('.parallax')
+            if (window.width > 1024) {
+                $('.parallax')
                 .each(function () {
                     var $obj = $(this);
                     $(window).scroll(function () {
@@ -31,6 +31,7 @@
                         $obj.css('background-position', bgpos);
                     });
                 });
+            }
         },
         bkg_img_slider: function () {
 
