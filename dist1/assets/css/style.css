@@ -13,7 +13,6 @@
     padding-bottom: 50px;
 }
 
-
 /*=====================================
   NAVBAR STYLES 
     ===================================*/
@@ -634,6 +633,26 @@ h1::after {
     background-attachment: fixed;
 }
 
+/* enable absolute positioning */
+.inner-addon {
+  position: relative;
+}
+
+/* style glyph */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align glyph */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+
 .spin {
     animation: spin 2s infinite linear
 }
@@ -717,5 +736,4 @@ h1::after {
 
 .parallax {
     background-position: 50% 0;
-    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
 }

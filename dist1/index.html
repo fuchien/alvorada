@@ -835,23 +835,25 @@
                     <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
                         <form id="contact_form">
                             <div class="form-group" data-aos="fade-up" data-aos-delay="200">
-                                <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span><input
-                                        type="text" class="form-control" id="email" name="email" required placeholder="Email"
-                                    /></div>
-                                <span class="msgEmail"></span>
+                                <div class="inner-addon left-addon">
+                                    <i class="glyphicon glyphicon-envelope"></i>
+                                    <input type="text" class="form-control" id="email" name="email" placeholder="Email"/>
+                                </div>
                             </div>
                             <div class="form-group" data-aos="fade-up" data-aos-delay="200">
-                                <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span><input type="text"
-                                        class="form-control" id="nome" name="nome" required placeholder="Nome" /></div>
+                                <div class="inner-addon left-addon">
+                                    <i class="glyphicon glyphicon-user"></i>
+                                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" />
+                                </div>
                             </div>
                             <div class="form-group" data-aos="fade-up" data-aos-delay="300">
-                                <input type="text" class="form-control" id="titulo" name="titulo" required placeholder="Título" />
+                                <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Título" />
                             </div>
                             <div class="form-group" data-aos="fade-up" data-aos-delay="400">
-                                <textarea name="message" required id="mensagem" name="mensagem" class="form-control" style="min-height: 150px;" placeholder="Messagem"></textarea>
+                                <textarea id="mensagem" name="mensagem" class="form-control" style="min-height: 150px;" placeholder="Messagem"></textarea>
                             </div>
                             <div class="form-group" data-aos="fade-up" data-aos-delay="400">
-                                <button type="submit" onclick="sendPost(event)" class="btn btn-info btn-block btn-lg enviar">ENVIAR <span class="glyphicon glyphicon-send"></span></button>
+                                <button type="submit" class="btn btn-info btn-block btn-lg enviar">ENVIAR <span class="glyphicon glyphicon-send"></span></button>
                             </div>
                         </form>
                     </div>
@@ -895,6 +897,7 @@
     <!--  Jquery Core Script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js "></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa
                     " crossorigin="anonymous "></script>
@@ -914,6 +917,7 @@
         AOS.init({
             duration: 600,
         })
+
     </script>
 </body>
 
