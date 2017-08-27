@@ -2,9 +2,6 @@ const express = require('express')
 const path = require('path')
 const bodyParser = require('body-parser')
 
-const form = require('./routes/formulario')
-const ip = require('./routes/ip')
-
 const port = process.env.PORT || 3004
 const app = express()
 
@@ -19,8 +16,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.use('/formulario', form)
-app.use('/ip', ip)
+app.use('/', require('./routes'))
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'dist1/index.html'))

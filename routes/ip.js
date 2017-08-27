@@ -1,10 +1,9 @@
 const express = require('express')
 const router = express.Router()
 
-router.get('/', (req, res, next) => {
+//Injeção de dependência
+const IpController = require('../controllers/ip')()
 
-    let resp = `<h1>Seu ip é ${req.headers['x-forwarded-for']}</h1>`
-    res.send(resp);
-})
+router.get('/', IpController.validarIp.bind(IpController))
 
 module.exports = router
